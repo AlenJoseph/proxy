@@ -17,11 +17,11 @@ const controller = require('../../controllers/ipfs-file');
 // @access  Public
 router.post('/upload', controller.upload);
 
-// @route   GET /api/ipfs-file/retrive
-// @desc    Add file to IPFS
+// @controller   POST /api/ipfs-file/check
+// @desc    Check file is present in IPFS
 // @Input   Content Hash
 // @Output  File
 // @access  Public
-router.get('/retrive', controller.retrive);
+router.post('/check', controller.check);
 
 module.exports = router;

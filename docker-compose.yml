@@ -34,10 +34,10 @@ services:
   regulator-ipfs:
     container_name: regulator-ipfs
     image: ipfs/go-ipfs:release
-    #   ports:
-    #     - "4001:4001" # ipfs swarm - expose if needed/wanted
-    #     - "5001:5001" # ipfs api - expose if needed/wanted
-    #     - "8080:8080" # ipfs gateway - expose if needed/wanted
+    ports:
+      - '4001:4001' # ipfs swarm - expose if needed/wanted
+      - '5001:5001' # ipfs api - expose if needed/wanted
+      - '8080:8080' # ipfs gateway - expose if needed/wanted
     volumes:
       - ./compose/regulator-ipfs:/data/ipfs
 
